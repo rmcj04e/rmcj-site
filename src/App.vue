@@ -2,8 +2,8 @@
   <div id="app">
     <b-container fluid="sm">
            <b-row>
-     <b-col><router-link to="/"><v-icon scale="2" name="home"></v-icon></router-link> <p>Главная</p></b-col>
-      <b-col><router-link to="/about"><v-icon scale="2" name="book-open"></v-icon> </router-link> <p>Эбаут ми</p> </b-col>
+     <b-col><router-link to="/"><v-icon scale="2" name="home"></v-icon></router-link></b-col>
+      <b-col><router-link to="/about"><v-icon scale="2" name="question-circle"></v-icon> </router-link> </b-col>
     </b-row>
     </b-container>
 <router-view></router-view>
@@ -16,8 +16,7 @@ export default {
   name: 'App',
   data(){
     return {
-      title : "rmcj.ru",
-      msg: "Моё первое приложение на vue"
+      title:"rmcj.ru"
     }
   }
 }
@@ -36,7 +35,7 @@ export default {
 body{
 }
 .bg{
-  background: url("https://i.pinimg.com/originals/fd/2f/a1/fd2fa10e71e4629dc754bd6b731aa1cf.gif") no-repeat center center fixed;
+  background: url("/storage/retro.gif") no-repeat center center fixed;
   background-size:cover;
   -webkit-background-size:cover;
   -moz-background-size:cover;
