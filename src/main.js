@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import { LayoutPlugin } from 'bootstrap-vue'
+Vue.use(LayoutPlugin)
 import VueRouter from "vue-router";
 import VueAwesome from "vue-awesome";
 import router from '@/router/index.js'
@@ -8,7 +9,6 @@ import router from '@/router/index.js'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-Vue.use(BootstrapVue)
 Vue.use(VueRouter)
 Vue.use(VueAwesome)
 
