@@ -11,7 +11,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
 Vue.use(VueAwesome)
-Vue.use(IconsPlugin)
 
 Vue.config.productionTip = false
 
