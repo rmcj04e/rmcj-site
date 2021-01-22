@@ -1,24 +1,14 @@
 <template>
   <div id="app">
-    
-     <b-navbar toggleable="sm" fixed="top" variant="dark" type="dark">
-        <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
-       <b-navbar-brand href="#">{{title}}</b-navbar-brand>
-        <b-collapse id="nav-text-collapse" is-nav>
-              <b-navbar-nav>
-        <b-nav-item to="/links">Ссылки</b-nav-item>
-        <b-nav-item to="/about">Обо мне</b-nav-item>
-      </b-navbar-nav>
-    </b-collapse>
-       </b-navbar>
-       <b-jumbotron id="mainjumbo">
-        <b-container fluid="sm">
-      <p>Евгений Горюнов ака rmcj</p>
-      <p>{{date}}</p>
-     <transition name="fade"> <router-view></router-view> </transition>
-        </b-container>
-       </b-jumbotron>
-  
+    <b-container fluid="sm">
+           <b-row>
+     <b-col><router-link to="/"><v-icon scale="2" name="home"></v-icon></router-link> <p>Главная</p></b-col>
+      <b-col><router-link to="/projects"><v-icon scale="2" name="link"></v-icon></router-link> <p>Мои проекты</p> </b-col>
+      <b-col><router-link to="/about"><v-icon scale="2" name="book-open"></v-icon> </router-link> <p>Эбаут ми</p> </b-col>
+    </b-row>
+    </b-container>
+<router-view></router-view>
+  <div class="bg"></div>
   </div>
 </template>
 
@@ -28,33 +18,50 @@ export default {
   data(){
     return {
       title : "rmcj.ru",
-      date: new Date(),
       msg: "Моё первое приложение на vue"
     }
-  },
-  methods:{
-    updDate(){
-      this.date = new Date()
-    }
-  },
-  mounted(){
-    setInterval(() => { this.updDate();},500)
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   margin-top: 60px;
+  color:#fff;
 }
-#mainjumbo{
-  background:rgba(255,255,255,0.8)
+body{
 }
-#wrapper{
+.bg{
+  background: url("https://i.pinimg.com/originals/fd/2f/a1/fd2fa10e71e4629dc754bd6b731aa1cf.gif") no-repeat center center fixed;
+  background-size:cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  -webkit-filter: blur(7px);
+  -moz-filter: blur(7px);
+  -o-filter: blur(7px);
+  -ms-filter: blur(7px);
+  filter: blur(7px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.fa-icon:hover {
+  transform: scale(1.2);
+}
+a{
+  color:#fff !important;
+}
+#links-foot {
   padding-top: 1rem;
 }
+
 </style>
