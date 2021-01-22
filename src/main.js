@@ -19,8 +19,10 @@ import 'vue-awesome/icons/flag'
 import 'vue-awesome/icons/home'
 import 'vue-awesome/icons/link'
 import 'vue-awesome/icons/brands/vk'
+import 'vue-awesome/icons/brands/telegram'
 import 'vue-awesome/icons/brands/github'
 import 'vue-awesome/icons/book-open'
+import 'vue-awesome/icons/brands/discord'
 import Icon from 'vue-awesome/components/Icon'
 Vue.component('v-icon', Icon)
 

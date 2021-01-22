@@ -3,7 +3,6 @@
     <b-container fluid="sm">
            <b-row>
      <b-col><router-link to="/"><v-icon scale="2" name="home"></v-icon></router-link> <p>Главная</p></b-col>
-      <b-col><router-link to="/projects"><v-icon scale="2" name="link"></v-icon></router-link> <p>Мои проекты</p> </b-col>
       <b-col><router-link to="/about"><v-icon scale="2" name="book-open"></v-icon> </router-link> <p>Эбаут ми</p> </b-col>
     </b-row>
     </b-container>
@@ -54,8 +53,11 @@ body{
   left: 0;
   z-index: -1;
 }
-.fa-icon:hover {
-  transform: scale(1.2);
+#icons-home>a>.fa-icon{
+  margin-inline-end: 1rem;
+}
+#icons-home>a>.fa-icon:hover {
+  transform: scale(2);
 }
 a{
   color:#fff !important;
